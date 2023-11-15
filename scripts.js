@@ -124,8 +124,6 @@ function createMonthLabel(x, label) {
 /* UI ---------------------------------------------- */
 
 
-
-
 // ====== SEASONBAR ======
 function createSeasonInput(x, y) {
 
