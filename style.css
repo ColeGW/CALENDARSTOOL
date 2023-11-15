@@ -1,0 +1,278 @@
+
+html, body {
+    padding: 0px;
+    margin: 0px;
+
+    background-color: #ffffff;
+    font-family: sans;
+
+    max-width:100%;
+    overflow-x:hidden;
+    overscroll-behavior: none;
+
+    text-align:center;
+}
+
+button {
+    user-select: none;
+}
+
+.calendarbox {
+    background:#ffffff;
+    position: relative;
+    width: 200%;
+    height: 70%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.horizontaldivision {
+    border-color: #bbbbbb;
+    height: 0px;
+    width: 100%;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.calendarobject {
+    position:absolute;
+    background-color: transparent;
+    display:inline-block;
+}
+
+.verticaldivision {
+    border-color: #d0d0d0;
+    width: 0px;
+    height: 100%;
+    border-width:0px;
+    border-right-width:1px;
+    border-style:solid;
+}
+
+.seasontitle {
+    user-select: none;
+    cursor: text;
+    min-width: 32px;
+    min-height: 19px;
+    text-align: left;
+}
+.seasontitle:hover {
+    border-width:0px;
+    user-select: none;
+    cursor: text;
+    background-color: #f0f0ffa0;
+    border-radius:2px;
+    border-bottom: 1px solid #f0f0ffa0;
+}
+
+.seasonduration {
+    height: 16px;
+    width: 4px;
+    text-align: right;
+    border-right: 1px solid #000000;
+}
+
+.seasontitleghost {
+    background: #00000020;
+    height: 20px;
+    width: 175px;
+    border-radius: 5px;
+    z-index: 0;
+    display: none;
+    position: relative;
+}
+
+.seasondurationghost {
+    background: #00000020;
+    width: 4px;
+    height: 16px;
+    z-index: 0;
+    display: none;
+    position: relative;
+}
+
+.seasonresizer {
+    width: 8px;
+    height:100%;
+    cursor: ew-resize;
+}
+
+.seasoninput {
+    background: #ffffff;
+    overflow: hide;
+}
+
+.textarea {
+    width: 178px;
+    height:32px;
+}
+
+.textareaghost {
+    background: #00000020;
+    width: 200px;
+    height: 32px;
+    border-radius:5px;
+    z-index: 0;
+    position: relative;
+    display: none;
+}
+
+.monthname {
+    margin: 2px;
+    margin-left: 8px;
+    color: #d0d0d0;
+}
+
+.datelabel {
+    margin: 20px;
+    margin-left: 4px;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    color: #d0d0d0;
+}
+
+.background {
+    user-select: none;
+    cursor: default;
+}
+
+.submitbutton {
+    margin: 20px;
+    padding: 12px;
+    width: 20%;
+    font-size: 21px;
+    user-select:none;
+    
+}
+
+
+.buttonbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: 4px;
+}
+
+.buttonsleft {
+    display:flex;
+    align-items:stretch;
+    width: 30%;
+}
+
+.buttonsright {
+    width: 30%;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.fullheight {
+    height:100%;
+}
+
+.topbutton {
+    font-size:24px;
+    min-width: 34px;
+}
+
+.toolbutton {
+    margin-left: 1px;
+    margin-right: 1px;
+}
+
+.nameinput {
+    text-align: center;
+    font-size:16px;
+}
+
+.jsoninput {
+    
+}
+
+.scrollbar {
+    width:100%;
+    height:16px;
+    background-color:#eeeeee;
+}
+
+.scroller {
+    position: relative;
+    width: 42px;
+    height:16px;
+    background-color: #cccccc;
+    border-radius:3px;
+}
+.scroller:hover {
+    position: relative;
+    width: 42px;
+    height:16px;
+    background-color: #bbbbbb;
+    border-radius:3px;
+}
+
+.infobox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.instructions {
+    font-size: 14px;
+    width: 70%;
+}
+
+.deleteselect {
+    box-shadow: 0px 0px 5px red;
+}
+
+.normalselect {
+    box-shadow: 0px 0px 5px #5A64FF;
+}
+
+.starterinfo {
+    width: 80%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    z-index: 40;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background-color: #fafafa;
+    border: 2px solid #606060;
+    border-radius:10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: scroll;
+}
+
+.info {
+    width: 80%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    text-align: left;
+}
+
+.center {
+    text-align: center;
+}
+
+.centerimg {
+    margin: auto;
+}
+
+.infoicon {
+    margin-left: 10px;
+    width: 44px;
+}
+
+.okaybutton {
+    font-size: 16px;
+    padding: 10px 30px;
+}
+

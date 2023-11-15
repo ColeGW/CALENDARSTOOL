@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <meta charset=UTF-8>
+        <link rel="stylesheet" href="style.css">
+        <script src="scripts.js"></script>
+        <title>WPI CALENDARS</title>
+
+    </head>
+    <body id="body">
+        <div class="buttonbar">
+            <div class="buttonsleft">
+                <input type="color" id="color-picker" value="#999fff" title="Select a color" class="fullheight">
+                <button id="pointer-button" class="toolbutton" title="Pointer"><img src="pointer.svg"></button>
+                <button id="bar-button" class="toolbutton" title="Add season bars"><img src="bar.svg"></button>
+                <button id="text-button" class="toolbutton" title="Add text notes"><img src="text.svg"></button>
+                <button id="erase-button" class="toolbutton" title="Erase elements"><img src="eraser.svg"></button>
+                <button id="move-v-button" class="toolbutton advanced" title="Move elements vertically"><img src="vertical_arrows.svg"></button>
+            </div>
+            <input type="text" size="64" placeholder="Include your name (optional)" id="name-input" class="nameinput">
+            <div class="buttonsright">
+                <input type="text", placeholder="load calendar JSON...", id="json-input", class="jsoninput toolbutton advanced">
+                <button id="help-button" class="topbutton toolbutton" title="Help"><b>?</b></button>
+                <button id="reset-button" class="topbutton toolbutton" title="Reset calendar">↺</button>
+            </div>
+        </div>
+        <div class="horizontaldivision"></div>
+        <div id="calendar-box" class="calendarbox">
+        </div>
+        <div class="horizontaldivision"></div>
+        <div class="scrollbar" id="scroll-bar">
+            <div class="scroller" id="scroller"></div>
+        </div>
+        <button id="submit-button" class="submitbutton" title="Submit this completed calendar to the researchers" >Submit</button>
+        <div class="infobox">
+            <div></div>
+            <div class="instructions">When you press submit, only the information you entered in the calendar above is sent to our servers.  We do not collect any other information.</div>
+            <div></div>
+        </div>
+        <div id="starter-info" class="starterinfo">
+            <div class="info center">
+                Use the tools to build a representation of your seasons over the course of a year. You can scroll the calendar to any time of year you wish.
+            </div>
+            <div class="info">
+                <img class="infoicon" src="color-icon.png">
+                <div>
+                    Choose a color to represent a season or event of significance.
+                </div>
+            </div>
+            <div class="info">
+                <img class="infoicon" src="bar.svg">
+                <div>
+                    Use the Season Bar tool to add seasons to the calendar.  Click where you want to create one, type a label for it, and resize the bar to the length you want.
+                </div>
+            </div>
+            <div class="info">
+                <img class="infoicon" src="text.svg">
+                <div>
+                    You can use the Text Box tool to add text to the calendar.  Each text box can be resized by dragging the lower-right corner
+                </div>
+            </div>
+            <div class="info">
+                <img class="infoicon" src="eraser.svg">
+                <div>
+                    You can use the Erase tool to remove elements from your calendar.
+                </div>
+            </div>
+            <div class="info">
+                <img class="centerimg" src="calendar-example.png">
+            </div>
+            <div class="info center">
+                Try to think deeply about what seasons you experience.  As well as the four "classic" seasons, you might experience weather seasons ("mud season," "monsoon season," "fire season"), cultural seasons ("holiday season," "football season," "pumpkin spice season," "McRib season"), industry seasons ("growing season," "busy season"), or countless others that we have yet to think of.  Try to share as much as you can!
+            </div>
+            <div class="okaybox">
+                <button id="okay-button" class="okaybutton">Got it!</button>
+            </div>
+        </div>
+    </body>
+</html>
