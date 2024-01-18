@@ -10,7 +10,7 @@ const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 
 const DATE_LABELS = ['June Solstice', 'December Solstice'];
 const DATES = [171, 355]; // June 21,  December 21
 
-const VERTICAL_SPACING = 40;
+const VERTICAL_SPACING = 30;
 
 const query = parse_query_string(window.location.search.substring(1));
 
@@ -30,8 +30,8 @@ let totalOffset = 0;
 
 const POINT = 0; const BAR = 1; const TEXT = 2; const DRAW = 3; const ERASE = 4; const EDIT = 5; const MOVE_V = 6;
 
-let mode = POINT;
-let lastMode = POINT;
+let mode = BAR;
+let lastMode = BAR;
 
 let listenersInitialized;
 let helpNodes;
@@ -60,7 +60,8 @@ function setup() {
         document.getElementsByClassName("advanced")[0].remove();
     }
     
-    document.getElementById("pointer-button").disabled = true;
+    //document.getElementById("pointer-button").disabled = false;
+    document.getElementById("bar-button").disabled = true;
 }
 
 // parse the query in the url
@@ -174,7 +175,7 @@ function createSeasonInput(x, y) {
 function createSeasonObject(x, y, label, color) {
     // make the label and bar
     let title = createClassedDivAt(x, y, label, ['seasontitle', 'foreground']);
-    let duration = createClassedDivAt(x, y + 20, '', ['seasonduration', 'foreground']);
+    let duration = createClassedDivAt(x, y + 25, '', ['seasonduration', 'foreground']);
 
     title.classList.add("storable-seasonbar");
 
@@ -183,7 +184,7 @@ function createSeasonObject(x, y, label, color) {
     // set the styles
     twinnedStyle(title, "color", "#000000");
     twinnedStyle(duration, "backgroundColor", color);
-    twinnedStyle(duration, "width", "4px");
+    twinnedStyle(duration, "width", "168px");
     
     // add the handles for resizing
     let resizer1 = createResizerForDuration(duration);
@@ -294,7 +295,7 @@ function createTextboxObject(x, y) {
     textbox.classList.add("storable-textbox")
     twinnedStyle(textbox, 'color', color);
     twinnedStyle(textbox, "borderStyle", 'none');
-    twinnedStyle(textbox, "width", "200px");
+    twinnedStyle(textbox, "width", "168px");
     twinnedStyle(textbox, "height", "32px");
     twinnedStyle(textbox, "maxWidth", doc_width / 2 + "px");
     twinnedStyle(textbox, "maxHeight", (box.getBoundingClientRect().height - y) + "px");
@@ -520,7 +521,7 @@ async function submitCalendarToDB() {
     button.innerText = "submitting...";
     button.disabled = true;
     const json = jsonizeCalendar();
-    const response = await fetch("https://f-1.karel.pw/calendardb/put", {
+    const response = await fetch("https://webhook.site/a07dd313-ef57-4eca-91ac-398883d19546", {
         method: 'POST',
         mode: 'no-cors',
         headers: {
@@ -622,7 +623,7 @@ function handleGhosts(x, y) {
         ghostBarTitle.style.display = "block";
         
         ghostBar.style.left = x + "px";
-        ghostBar.style.top = (y + 20) + "px";
+        ghostBar.style.top = (y + 35) + "px";
         ghostBar.style.display = "block";
         
     } else {
@@ -668,6 +669,7 @@ function createClassedElementAt(x, y, text, classes, elementType) {
         elem.classList.add(clazz);
     }
     elem.innerText = text;
+    elem.style.color = "black";
     addChildToContainer(box, elem, x, y);
     return elem;
 }
