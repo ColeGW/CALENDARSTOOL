@@ -9,14 +9,14 @@
     <body id="body">
         <div class="buttonbar">
             <div class="buttonsleft">
-                <input type="color" id="color-picker" value="#000fff" title="Select a color" class="fullheight">
+                <input type="color" id="color-picker" value="#33BBFF" title="Select a color" class="fullheight">
                 <button id="pointer-button" class="toolbutton" title="Pointer"><img src="pointer.svg"></button>
                 <button id="bar-button" class="toolbutton" title="Add season bars"><img src="bar.svg"></button>
                 <button id="text-button" class="toolbutton" title="Add text notes"><img src="text.svg"></button>
                 <button id="move-v-button" class="toolbutton advanced" title="Move elements vertically"><img src="vertical_arrows.svg"></button>
                 <button id="erase-button" class="toolbutton" title="Erase elements"><img src="eraser.svg"></button>
             </div>
-            <input type="text" size="64" placeholder="Include your name (optional)" id="name-input" class="nameinput">
+            <input type="text" size="64" placeholder="Include your name and location (optional)" id="name-input" class="nameinput">
             <div class="buttonsright">
                 <input type="text", placeholder="load calendar JSON...", id="json-input", class="jsoninput toolbutton advanced">
                 <button id="help-button" class="topbutton toolbutton" title="Help"><b>?</b></button>
@@ -37,8 +37,9 @@
             <div></div>
         </div>
         <div id="starter-info" class="starterinfo">
+            <div id="larger-title" class="larger-title center">Calendar Tool</div>
             <div class="info center">
-                Use the tools to build a representation of your seasons over the course of a year. You can scroll the calendar to any time of year you wish.
+                <strong>Use the tools to build a representation of the season you experience throughout the year. Scroll through the calendar to create an event at any time of the year.</strong>
             </div>
             <div class="info">
                 <img class="infoicon" src="color-icon.png">

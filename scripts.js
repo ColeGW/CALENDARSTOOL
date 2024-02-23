@@ -521,7 +521,7 @@ async function submitCalendarToDB() {
     button.innerText = "submitting...";
     button.disabled = true;
     const json = jsonizeCalendar();
-    const response = await fetch("https://webhook.site/a07dd313-ef57-4eca-91ac-398883d19546", {
+    const response = await fetch("https://webhook.site/48ffdead-1d66-45f7-8347-978fa71193b5", {
         method: 'POST',
         mode: 'no-cors',
         headers: {
