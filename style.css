@@ -40,6 +40,12 @@ button {
     display:inline-block;
 }
 
+.larger-title {
+    font-size: 24px; 
+    font-weight: bold; 
+    margin-bottom: 10px; 
+}
+
 .verticaldivision {
     border-color: #d0d0d0;
     width: 0px;
@@ -219,7 +225,7 @@ button {
 }
 
 .instructions {
-    font-size: 14px;
+    font-size: 12px;
     width: 70%;
 }
 
@@ -232,8 +238,8 @@ button {
 }
 
 .starterinfo {
-    width: 80%;
-    height: 80%;
+    width: 85%;
+    height: 85%;
     top: 50%;
     left: 50%;
     z-index: 40;
@@ -250,7 +256,7 @@ button {
 }
 
 .info {
-    width: 80%;
+    width: 85%;
     margin: 10px auto;
     display: flex;
     flex-direction: row;
