@@ -435,6 +435,8 @@ function jsonizeCalendar() {
     data.name = document.getElementById("name-input").value;
     data.id = query.id;
     data.seasonbars = [];
+    data.notes = document.getElementById("notes-section").value;
+
     // save season bars
     let elems = document.getElementsByClassName("storable-seasonbar");
     for (let elem of elems) {
@@ -492,6 +494,7 @@ function calendarFromJson(json) {
     }
 
     document.getElementById("name-input").value = data.name;
+    document.getElementById("notes-section").value = data.notes;
 
     scrollChildrenSideways(box, 1);
     scrollChildrenSideways(box, -1);
