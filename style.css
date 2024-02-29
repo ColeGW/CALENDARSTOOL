@@ -150,8 +150,6 @@ button {
 
 .submitbutton {
     margin: auto;
-    
-    margin-top: 40px;
     padding: 12px;
     font-size: 21px;
     user-select:none;
@@ -244,13 +242,41 @@ button {
 .lowercontainer {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: stretch;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     margin: 4px;
     box-sizing: border-box;
 }
 
+.lowercontainer .container {
+    width: calc(33.33%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*padding: 0 10px;*/
+}
+
+.notes-input {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.container img {
+    max-width: 100%; /* Ensures the image resizes to fit within its container */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.wpilogo {
+    align-items: center;
+    width: 100%;
+    margin: 4px;
+    box-sizing: border-box;
+}
+
+/*
 .lowercontainerright {
     display: flex;
     flex-direction: row;
@@ -258,7 +284,7 @@ button {
     align-items: stretch;
     margin: 4px;
 
-}
+} 
 
 .lowercontainerright img {
     width: 260px;
@@ -267,6 +293,7 @@ button {
 
 }
 
+*/
 .normalselect {
     box-shadow: 0px 0px 5px #5A64FF;
 }
@@ -303,6 +330,9 @@ button {
 }
 
 .centerimg {
+
+    max-width: 100%;
+    height: auto;
     margin: auto;
 }
 
